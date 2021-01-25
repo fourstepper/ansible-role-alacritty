@@ -1,0 +1,3 @@
+---
+- debug:
+    msg: "Sorry, Debian is not supported - please consider building from source - https://github.com/alacritty/alacritty/blob/master/INSTALL.md"

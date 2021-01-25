@@ -1,0 +1,17 @@
+---
+# tasks file for ansible-role-alacritty
+- name: Include tasks for the target machine
+  include_tasks: "{{ ansible_facts['distribution'] }}.yml"
+
+- name: Move the configuration files in place from the global folder
+  copy:
+    src: "../../../config_files/alacritty"
+    dest: "$HOME/.config/"
+  ignore_errors: true
+  register: global_config
+
+- name: Move the configuration files in place (if global fails)
+  copy:
+    src: files/alacritty
+    dest: "$HOME/.config/"
+  when: global_config.failed
