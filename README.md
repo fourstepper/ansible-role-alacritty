@@ -6,4 +6,4 @@ This role installs alacritty on Alpine Linux, Fedora and Pop!OS. Ubuntu is unsup
 License
 -------
 
-BSD
+MIT
