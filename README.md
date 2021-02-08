@@ -5,6 +5,11 @@ ansible-role-alacritty
 
 This role installs alacritty on Alpine Linux, Fedora and Pop! OS. Ubuntu and Debian are unsupported as long as they don't have a package.
 
+Variables
+-------
+
+None.
+
 License
 -------
 
