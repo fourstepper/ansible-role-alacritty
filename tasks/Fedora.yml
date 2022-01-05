@@ -1,19 +1,4 @@
 ---
-- name: Make sure dnf-plugins-core are installed
-  package:
-    name: dnf-plugins-core
-    state: present
-  become: yes
-  when: ansible_facts['distribution'] == 'Fedora'
-
-- name: Enable the copr alacritty repo
-  command:
-    cmd: 'dnf copr enable pschyska/alacritty -y'
-    creates: /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:pschyska:alacritty.repo
-    warn: false
-  become: yes
-  when: ansible_facts['distribution'] == 'Fedora'
-
 - name: Install alacritty
   package:
     name: alacritty
